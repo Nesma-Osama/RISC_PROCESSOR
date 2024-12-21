@@ -18,11 +18,11 @@ NEW_PC<=IM_0;
 pc_stp<='0';
 --------------------------------------------
 ELSIF (EXCEP ='1' AND MEM_SRC='0')THEN-- Execption about memory 
-NEW_PC<=IM_1;
+NEW_PC<=IM_2;
 pc_stp<='0';
 -------------------------------------------
 ELSIF (EXCEP ='1' AND MEM_SRC='1')THEN--Stack
-NEW_PC<=IM_2;
+NEW_PC<=IM_1;
 pc_stp<='0';
 ----------------------------------------
 ELSIF(HLT='1')THEN --hlt stop pc
