@@ -24,7 +24,6 @@ process(opcode)
 begin
     if opcode = "00000" then
         output_signals <= (others => '0');
-
         --- NOP 
     elsif opcode = "00001" then
         output_signals <= (others => '0');
@@ -41,6 +40,7 @@ begin
         output_signals(22) <= '1'; ---right bit alu_control
         output_signals(9)  <='1';  --- write back         
         output_signals(17)<='1';   --- flag conrol
+ 	output_signals(18)<='1';   -- hazard enable
     elsif opcode = "00100" then
         -- INC Rdst, Rsrc1
         output_signals <= (others => '0');
@@ -48,11 +48,12 @@ begin
         output_signals(23) <='1';  --- alu_control
         output_signals(9)  <='1';  --- write_back         
         output_signals(17)<='1';   --- flag_conrol
-        
+        output_signals(18)<='1';   -- hazard enable
     elsif opcode = "00101" then
         -- OUT Rsrc1
         output_signals <= (others => '0');
-        output_signals(8)<='1'; ---io_write     
+        output_signals(8)<='1'; ---io_write   
+	output_signals(18)<='1';   -- hazard enable  
     elsif opcode = "00110" then
         -- IN Rdst
         output_signals <= (others => '0');
@@ -60,28 +61,34 @@ begin
         output_signals(9)  <='1';  --- write_back 
 
     elsif opcode = "00111" then
-        -- MOV Rdst, Rsrc1
+        -- MOV Rdst, Rsrc1   make address rs and rt the same for this instruction
         output_signals <= (others => '0');
         output_signals(24)<='1';   ---mov
         output_signals(9)  <='1';  --- write_back 
+	output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "01000" then
         -- ADD Rdst,Rsrc1, Rsrc2
         output_signals <= (others => '0');
         output_signals(9)  <='1';  --- write_back 
         output_signals(17)<='1';   --- flag conrol
-        
+        output_signals(18)<='1';   -- hazard enable check on rs
+	output_signals(19)<='1';   -- hazard  rs and rt one_two
     elsif opcode = "01001" then
         -- SUB Rdst, Rsrc1,Rsrc2
         output_signals <= (others => '0');
         output_signals(20)<='1';   --- alu_control second mux
         output_signals(9)  <='1';  --- write_back 
         output_signals(17)<='1';   --- flag conrol
+ 	output_signals(18)<='1';   -- hazard enable check on rs
+	output_signals(19)<='1';   -- hazard  rs and rt one_two
     elsif opcode = "01010" then
         -- AND Rdst,Rsrc1, Rsrc2
         output_signals <= (others => '0');
         output_signals(23)<='1'; --- alu_control
         output_signals(9)  <='1';  --- write_back 
         output_signals(17)<='1';   --- flag conrol
+        output_signals(18)<='1';   -- hazard enable check on rs
+	output_signals(19)<='1';   -- hazard  rs and rt one_two
     elsif opcode = "01011" then
         -- IADD Rdst,Rsrc1, Imm
         output_signals <= (others => '0');
@@ -89,13 +96,14 @@ begin
         output_signals(9)  <='1';  --- write_back 
         output_signals(17)<='1';   --- flag conrol
         output_signals(5) <= '1';  ---fetch_decode_flush
+	output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "01100" then
         -- PUSH Rsrc1
         output_signals <= (others => '0');
         output_signals(12)<='1';   ---memory src
         output_signals(25)<='1';   --- push
         output_signals(11)<='1';   --- memroy_write
-        
+        output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "01101" then
         -- POP Rdst
         output_signals <= (others => '0');
@@ -119,31 +127,41 @@ begin
 	output_signals(0)  <='1';  --mem_to_reg
 	output_signals(23) <='1';  --- alu_control  mov =>RT alu RT,IMM
 	output_signals(5)  <= '1';  ---fetch_decode_flush
+	output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "10000" then
         -- STD Rsrc1,offset(Rsrc2)
         output_signals <= (others => '0');
         output_signals(11)<='1';   --- memroy_write
 	output_signals(23) <='1';  --- alu_control  mov =>RT alu RT,IMM
 	output_signals(5)  <= '1';  ---fetch_decode_flush
-
+        output_signals(18)<='1';   -- hazard enable check on rs
+	output_signals(19)<='1';   -- hazard  rs and rt one_two
     elsif opcode = "10001" then
         -- JZ Rsrc1
         output_signals <= (others => '0');
-        output_signals(14)<='1';-- conditional_branch left side 
+        output_signals(14)<='1';-- conditional_branch left side
+        output_signals(18)<='1';   -- hazard enable check on rs
+	
     elsif opcode = "10010" then
         -- JN Rsrc1
         output_signals <= (others => '0');
         output_signals(15)<='1';-- conditional_branch right side 
+	output_signals(18)<='1';   -- hazard enable check on rs
+	
+
     elsif opcode = "10011" then
         -- JC Rsrc1
         output_signals <= (others => '0');
         output_signals(14)<='1';-- conditional_branch left side 
  	output_signals(15)<='1';-- conditional_branch right side 
+ 	output_signals(18)<='1';   -- hazard enable check on rs
+
     elsif opcode = "10100" then
         -- JMP Rsrc1
         output_signals <= (others => '0');
         output_signals(5) <= '1';  ---fetch_decode_flush
   	output_signals(4) <= '1';  ---conditional branch
+        output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "10101" then
         -- CALL Rsrc1
         output_signals <= (others => '0');
@@ -154,6 +172,7 @@ begin
   	output_signals(11)<='1';   --- memroy_write
      	output_signals(12)<='1';   ---memory src
         output_signals(13)<='1';   ---memory datasrc
+        output_signals(18)<='1';   -- hazard enable check on rs
     elsif opcode = "10110" then
         -- RET
         output_signals <= (others => '0');
@@ -203,4 +222,3 @@ end process;
 
 
 end control_unit_architecture;
-
