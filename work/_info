@@ -1,0 +1,855 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Eadder
+Z0 w1734808264
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR
+Z5 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/adder.vhd
+Z6 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/adder.vhd
+l0
+L4
+Vka0dGaN<3]Yh@9K]n[^F`1
+!s100 3:S8OeJIzeCdhiTc>eZKZ1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1734877344
+!i10b 1
+Z9 !s108 1734877344.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/adder.vhd|
+Z11 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/adder.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aarch_adder
+R1
+R2
+R3
+DEx4 work 5 adder 0 22 ka0dGaN<3]Yh@9K]n[^F`1
+l14
+L12
+V[_^V<2k@8[I?Qmb0lJfQU2
+!s100 J>LOOGDJ[cgUR9eV1W`O<0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+R0
+R2
+R3
+R4
+Z14 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd
+Z15 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd
+l0
+L4
+VGj7]Uf8c7?iaT2<n@a6CZ0
+!s100 ]R6oNkEF63@HbGmfXLGn30
+R7
+32
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd|
+Z17 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd|
+!i113 1
+R12
+R13
+Aarch_alu
+R2
+R3
+DEx4 work 3 alu 0 22 Gj7]Uf8c7?iaT2<n@a6CZ0
+l64
+L20
+V8TlCMXSMV[^l<KPFEM3EG0
+!s100 N@Eol2jKNLCfF0kGRT^8m2
+R7
+32
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Ebranch_unit
+Z18 w1734788652
+R2
+R3
+R4
+Z19 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd
+Z20 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd
+l0
+L11
+Vnj`UQ0MHQ;k2<<da^?Gc^3
+!s100 kaWjYS3GgP@2g_X`jAcZh3
+R7
+32
+Z21 !s110 1734877345
+!i10b 1
+Z22 !s108 1734877345.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd|
+Z24 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd|
+!i113 1
+R12
+R13
+Abranch_unit
+R2
+R3
+DEx4 work 11 branch_unit 0 22 nj`UQ0MHQ;k2<<da^?Gc^3
+l19
+L18
+V1alZ@RVkz:I_k9eX7mgH50
+!s100 X=;99V[3]Lib[@RnJznUo3
+R7
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R12
+R13
+Econtrol_unit
+Z25 w1734881222
+R1
+R2
+R3
+R4
+Z26 8C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\control_unit.vhd
+Z27 FC:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\control_unit.vhd
+l0
+L14
+VK;CMWoa?7zalOMm`K6T9[0
+!s100 1An9UEjhhiD1NDOJbJh5Y0
+R7
+32
+Z28 !s110 1734881240
+!i10b 1
+Z29 !s108 1734881240.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\control_unit.vhd|
+Z31 !s107 C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\control_unit.vhd|
+!i113 1
+R12
+R13
+Acontrol_unit_architecture
+R1
+R2
+R3
+DEx4 work 12 control_unit 0 22 K;CMWoa?7zalOMm`K6T9[0
+l22
+L21
+VkVRhMdczFbB?4NC4k=?@Z3
+!s100 RS;37zQLL:lm7^zeG<;iK1
+R7
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Edata_memory
+Z32 w1734379815
+R1
+R2
+R3
+R4
+Z33 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd
+Z34 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd
+l0
+L5
+Vk94TXh2kF2zBi>HMZE;C;2
+!s100 D4Z4NR_kVU`hKmz39^YlF3
+R7
+32
+Z35 !s110 1734877342
+!i10b 1
+Z36 !s108 1734877342.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd|
+Z38 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd|
+!i113 1
+R12
+R13
+Adata_memory_arch
+R1
+R2
+R3
+DEx4 work 11 data_memory 0 22 k94TXh2kF2zBi>HMZE;C;2
+l20
+L17
+VNCZRA0H5IK4ijC[>^7IiS0
+!s100 @bD<miK2Bb>OJmRhL7f1=1
+R7
+32
+Z39 !s110 1734877343
+!i10b 1
+R36
+R37
+R38
+!i113 1
+R12
+R13
+Eforwarding_unit
+R18
+R2
+R3
+R4
+Z40 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd
+Z41 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd
+l0
+L21
+V`MfczGzeo?D`5;XScTakl1
+!s100 c2b_EP@5nYR5b>E]>jMei0
+R7
+32
+R21
+!i10b 1
+R22
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd|
+Z43 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd|
+!i113 1
+R12
+R13
+Aforwarding_unit
+R2
+R3
+DEx4 work 15 forwarding_unit 0 22 `MfczGzeo?D`5;XScTakl1
+l30
+L29
+VZlO0=h>9b4i8zVRP`TR]X1
+!s100 7H>l5@I00UJLQ2j=KFQ=S3
+R7
+32
+R21
+!i10b 1
+R22
+R42
+R43
+!i113 1
+R12
+R13
+Ehazard_detection_unit
+R18
+R2
+R3
+R4
+Z44 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/hazard_detection_unit.vhd
+Z45 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/hazard_detection_unit.vhd
+l0
+L4
+V2e1aB?l2GB?gdY3d30CjC1
+!s100 6JelSS3HiRzH]zl4bz_P72
+R7
+32
+R21
+!i10b 1
+R22
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/hazard_detection_unit.vhd|
+Z47 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/hazard_detection_unit.vhd|
+!i113 1
+R12
+R13
+Ahazard_detection_unit
+R2
+R3
+DEx4 work 21 hazard_detection_unit 0 22 2e1aB?l2GB?gdY3d30CjC1
+l15
+L14
+VK4`1M9@9hc4F25i>IaXn_1
+!s100 I93b:4BE7ESSQbJ4LD1zR0
+R7
+32
+R21
+!i10b 1
+R22
+R46
+R47
+!i113 1
+R12
+R13
+Einc
+R0
+R1
+R2
+R3
+R4
+Z48 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/inc.vhd
+Z49 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/inc.vhd
+l0
+L4
+VBE4A]Xf`i`nE1[mze0S?F3
+!s100 z@^D;U^nE`X>W=UIEM2=]1
+R7
+32
+R8
+!i10b 1
+R9
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/inc.vhd|
+Z51 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/inc.vhd|
+!i113 1
+R12
+R13
+Aarch_inc
+R1
+R2
+R3
+DEx4 work 3 inc 0 22 BE4A]Xf`i`nE1[mze0S?F3
+l14
+L12
+VY4=izmLGoobGP?7>9`dT>3
+!s100 m_85`1VkI06eU^]Uei=C?1
+R7
+32
+R8
+!i10b 1
+R9
+R50
+R51
+!i113 1
+R12
+R13
+Einstruction_memory
+Z52 w1734875293
+R1
+R2
+R3
+R4
+Z53 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd
+Z54 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd
+l0
+L6
+V1GV1zhj_9;4JoZ]3z8=^e1
+!s100 d6;kR>M138izAgenmf26A2
+R7
+32
+R39
+!i10b 1
+Z55 !s108 1734877343.000000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd|
+Z57 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd|
+!i113 1
+R12
+R13
+Ainstruction_arch
+R1
+R2
+R3
+DEx4 work 18 instruction_memory 0 22 1GV1zhj_9;4JoZ]3z8=^e1
+l22
+L19
+V=fCm]CnhczYD<G5cMPdGk0
+!s100 8f@9HOa?CgA4:M4Bk1dA10
+R7
+32
+R39
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R12
+R13
+Emux_2_1
+R18
+R2
+R3
+R4
+Z58 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_2_1.vhd
+Z59 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_2_1.vhd
+l0
+L3
+VIMS[VMSBmbd456k?Uge0@0
+!s100 0MjKTYW49mN:N83C23K0m2
+R7
+32
+R21
+!i10b 1
+R22
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_2_1.vhd|
+Z61 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_2_1.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+DEx4 work 7 mux_2_1 0 22 IMS[VMSBmbd456k?Uge0@0
+l16
+L15
+VK6QTADHUVG9NnzVM]8MBd1
+!s100 LdB]dGadnCPlHFE9X<80Q0
+R7
+32
+R21
+!i10b 1
+R22
+R60
+R61
+!i113 1
+R12
+R13
+Emux_4_2
+R18
+R2
+R3
+R4
+Z62 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_4_2.vhd
+Z63 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_4_2.vhd
+l0
+L4
+VJ2K7QSTl?E9VmOk?W?oF_1
+!s100 :?M4^njB1z]@OALOY8iHo2
+R7
+32
+R21
+!i10b 1
+R22
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_4_2.vhd|
+Z65 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_4_2.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+DEx4 work 7 mux_4_2 0 22 J2K7QSTl?E9VmOk?W?oF_1
+l19
+L18
+VnlDQ9IYSZVbMLB0a_MkH00
+!s100 9Icc0J0W7QhKkV1[e?j;J2
+R7
+32
+R21
+!i10b 1
+R22
+R64
+R65
+!i113 1
+R12
+R13
+Emux_8_3
+R18
+R2
+R3
+R4
+Z66 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_8_3.vhd
+Z67 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_8_3.vhd
+l0
+L4
+VjD=4@J1P=e9@7NPGnRN=81
+!s100 UYET1C@:4mA@Vzg4=:dOC1
+R7
+32
+R21
+!i10b 1
+R22
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_8_3.vhd|
+Z69 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/mux_8_3.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+DEx4 work 7 mux_8_3 0 22 jD=4@J1P=e9@7NPGnRN=81
+l23
+L22
+VWie1;M;gHT[za;oN5[3le0
+!s100 ]iHfke<C>QiYZdN]6QHMW0
+R7
+32
+R21
+!i10b 1
+R22
+R68
+R69
+!i113 1
+R12
+R13
+Emy_and
+R0
+R1
+R2
+R3
+R4
+Z70 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/and.vhd
+Z71 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/and.vhd
+l0
+L4
+VXGT17MHnLzNol@F1d>_z_0
+!s100 cOT6_0Y>9I:`GO]0FF>DO1
+R7
+32
+R8
+!i10b 1
+R9
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/and.vhd|
+Z73 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/and.vhd|
+!i113 1
+R12
+R13
+Aarch_my_and
+R1
+R2
+R3
+DEx4 work 6 my_and 0 22 XGT17MHnLzNol@F1d>_z_0
+l14
+L12
+VaoQMMR_Zll5TMcTdKZJ1;1
+!s100 `C98:`0XWNj>Po`>@;DXJ1
+R7
+32
+R8
+!i10b 1
+R9
+R72
+R73
+!i113 1
+R12
+R13
+Emy_not
+R0
+R1
+R2
+R3
+R4
+Z74 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/not.vhdl
+Z75 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/not.vhdl
+l0
+L4
+VUmXJ4A]h1MKiMU=ERfQlQ2
+!s100 o`Sc_QFLgDZn`@V7G@k2<1
+R7
+32
+R8
+!i10b 1
+R9
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/not.vhdl|
+Z77 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/not.vhdl|
+!i113 1
+R12
+R13
+Aarch_my_not
+R1
+R2
+R3
+DEx4 work 6 my_not 0 22 UmXJ4A]h1MKiMU=ERfQlQ2
+l14
+L12
+Vk`lhnaoHa^OzmJJ8@l5oa3
+!s100 j^baS?LMckQ5o=m45Pk=S3
+R7
+32
+R8
+!i10b 1
+R9
+R76
+R77
+!i113 1
+R12
+R13
+Epc_control_unit
+R52
+R2
+R3
+R4
+Z78 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd
+Z79 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd
+l0
+L6
+Vh?>9?X]2d>5eC?66nKM:22
+!s100 LIZ:?Lc[XnKW@WG2AW>Ne2
+R7
+32
+R39
+!i10b 1
+R55
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd|
+Z81 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd|
+!i113 1
+R12
+R13
+Apc_control_unit
+R2
+R3
+DEx4 work 15 pc_control_unit 0 22 h?>9?X]2d>5eC?66nKM:22
+l14
+L13
+V]EePbTHJTG`<992Ae=R7d0
+!s100 ma=7omUl9kPLQ65g>259N1
+R7
+32
+R39
+!i10b 1
+R55
+R80
+R81
+!i113 1
+R12
+R13
+Ereg_file
+Z82 w1734382293
+R1
+R2
+R3
+R4
+Z83 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd
+Z84 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd
+l0
+L5
+VZ@5`zWJlK?`49>M]YEZmQ3
+!s100 >aLT7CeH5l=A<>^DGBXGI1
+R7
+32
+R35
+!i10b 1
+R36
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd|
+Z86 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd|
+!i113 1
+R12
+R13
+Areg_file_arch
+R1
+R2
+R3
+DEx4 work 8 reg_file 0 22 Z@5`zWJlK?`49>M]YEZmQ3
+l22
+L19
+Vn8UPX>HT6NG>Wl`8Qnn0]2
+!s100 TQY<dHR^QnZROUZFDHko`1
+R7
+32
+R35
+!i10b 1
+R36
+R85
+R86
+!i113 1
+R12
+R13
+Esixteen_bit_register
+Z87 w1734877740
+R1
+R2
+R3
+R4
+Z88 8C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\register_16.vhd
+Z89 FC:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\register_16.vhd
+l0
+L4
+VW4YM[_>AJ7_:3J_6bReDG3
+!s100 E1dRm9m;`Ho65AH8>zIXY3
+R7
+32
+Z90 !s110 1734877744
+!i10b 1
+Z91 !s108 1734877744.000000
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\register_16.vhd|
+Z93 !s107 C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\register_16.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 20 sixteen_bit_register 0 22 W4YM[_>AJ7_:3J_6bReDG3
+l16
+L15
+VmnObPeFA24Qg<:He[a]He2
+!s100 UMlhbG4GWo1D3LN@hToiN0
+R7
+32
+R90
+!i10b 1
+R91
+R92
+R93
+!i113 1
+R12
+R13
+Esp_controller
+Z94 w1734808243
+R1
+R2
+R3
+R4
+Z95 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/sp_controller.vhd
+Z96 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/sp_controller.vhd
+l0
+L5
+V94UCdP4jHj^i@0>UfUd6V3
+!s100 oOW;Tl7DieR1h1NV0<Hh33
+R7
+32
+R8
+!i10b 1
+R9
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/sp_controller.vhd|
+Z98 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/sp_controller.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 sp_controller 0 22 94UCdP4jHj^i@0>UfUd6V3
+l17
+L15
+VXbJn[nRj`^gM;ji=Co1<l0
+!s100 Tzfd;JN]9EEaB3lmUB76R3
+R7
+32
+R8
+!i10b 1
+R9
+R97
+R98
+!i113 1
+R12
+R13
+Esubtract
+R0
+R1
+R2
+R3
+R4
+Z99 8C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd
+Z100 FC:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd
+l0
+L5
+V2LWgHiU7Z6;SJR1_Smn[C1
+!s100 6BDlNW`IE[AI7M4H9NkFK2
+R7
+32
+R8
+!i10b 1
+R9
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd|
+Z102 !s107 C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd|
+!i113 1
+R12
+R13
+Aarch_subtract
+R1
+R2
+R3
+DEx4 work 8 subtract 0 22 2LWgHiU7Z6;SJR1_Smn[C1
+l15
+L13
+VT[dF1ND<Po<gQ^3f1^bB11
+!s100 `O61;94:0@CRU8_9g_6e72
+R7
+32
+R8
+!i10b 1
+R9
+R101
+R102
+!i113 1
+R12
+R13
+Etop_module_first_stage
+Z103 w1734877856
+R1
+R2
+R3
+R4
+Z104 8C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_first_stage.vhd
+Z105 FC:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_first_stage.vhd
+l0
+L5
+V:ATi[je`T3DidRen7CZ`h0
+!s100 ?PD=PoN=L@E^R_5=cPR1>1
+R7
+32
+Z106 !s110 1734877860
+!i10b 1
+Z107 !s108 1734877860.000000
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_first_stage.vhd|
+Z109 !s107 C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_first_stage.vhd|
+!i113 1
+R12
+R13
+Aarch_top_module_first_stage
+R1
+R2
+R3
+DEx4 work 22 top_module_first_stage 0 22 :ATi[je`T3DidRen7CZ`h0
+l61
+L18
+VFQ:5RQcF@PF?FJ4UeOom^2
+!s100 f]8XS[8QeWTlo]::D?@`N1
+R7
+32
+R106
+!i10b 1
+R107
+R108
+R109
+!i113 1
+R12
+R13
+Etop_module_second_stage
+Z110 w1734882302
+R1
+R2
+R3
+R4
+Z111 8C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_second_stage.vhd
+Z112 FC:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_second_stage.vhd
+l0
+L6
+V5>I::L]Ze?@2>E5zNiLj82
+!s100 `ZCI@zID?YTHOcWZ;;6Q@2
+R7
+32
+Z113 !s110 1734882305
+!i10b 1
+Z114 !s108 1734882305.000000
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_second_stage.vhd|
+Z116 !s107 C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_second_stage.vhd|
+!i113 1
+R12
+R13
+Atop_module_second_stage_arch
+R1
+R2
+R3
+Z117 DEx4 work 23 top_module_second_stage 0 22 5>I::L]Ze?@2>E5zNiLj82
+l56
+L23
+VB>cRA2XbPbf^Y;`[ZHmQH3
+!s100 HHa^:Wmgh:Y@1W]ZH5>0B1
+R7
+32
+R113
+!i10b 1
+R114
+R115
+R116
+!i113 1
+R12
+R13

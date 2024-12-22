@@ -27,8 +27,8 @@ architecture arch_top_module_first_stage of top_module_first_stage is
 	PORT( clk     : in STD_LOGIC;                     
         reset   : in STD_LOGIC;                     
         enable  : in STD_LOGIC;                     
-        data_in : in STD_LOGIC_VECTOR(n-1 downto 0); 
-        data_out: out STD_LOGIC_VECTOR(n-1 downto 0) 
+        data_in : in STD_LOGIC_VECTOR(15 downto 0); 
+        data_out: out STD_LOGIC_VECTOR(15 downto 0) 
 	);
 	END COMPONENT;
 
