@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_4_2 is
     generic (
-        DATA_WIDTH : positive := 16
+        DATA_WIDTH : positive := 8
     );
     port (
         input_0   : in  std_logic_vector(DATA_WIDTH-1 downto 0);

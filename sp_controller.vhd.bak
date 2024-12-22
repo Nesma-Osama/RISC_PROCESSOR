@@ -21,7 +21,7 @@ begin
             sp_unsigned <= unsigned(sp);
             if push = '1' and pop='0' then
                 sp_unsigned <= sp_unsigned + 1;
-            elsif pop = '1' and push ='0' then
+            elsif pop = '1' and pop ='0' then
                 sp_unsigned <= sp_unsigned - 1;
             end if;
             
