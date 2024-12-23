@@ -27,7 +27,6 @@ carry_flag,zero_flag,negative_flag: OUT std_logic
 END component;
 component sp_controller is
     port (
-        clk     : in  std_logic;  
         sp      : in  std_logic_vector(15 downto 0); 
         pop     : in  std_logic;
         push    : in  std_logic; 
@@ -116,7 +115,7 @@ u4:ALU port map(newrs,second_alu_input,alu_output,sel,flags(2),flags(0),flags(1)
 u5:mux_2_1 port map (alu_output,second_alu_input,control_unit_signals_in(22),alu_or_newrt);
 u6:mux_2_1 port map (alu_or_newrt,input_port,control_unit_signals_in(7),ex_result);
 u7:sixteen_bit_register port map(clk,'0','1',new_sp,sp);
-u8:sp_controller port map(clk,sp_in,control_unit_signals_in(24),ex_mem_push,new_sp);
+u8:sp_controller port map(sp_in,control_unit_signals_in(24),ex_mem_push,new_sp);
 u9: sixteen_bit_register generic map(3) port map(clk,'0','1',new_flages,ccr_flages);
 u10:flages_unit port map (flags,ccr_flages,control_unit_signals_in(17 downto 16 ),alu_operation,control_unit_signals_in(15 downto 14),new_flages);
 u11:branch_unit port map(ccr_flages,control_unit_signals_in(15 downto 14),branch_ex);
