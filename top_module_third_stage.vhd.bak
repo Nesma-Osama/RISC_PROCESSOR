@@ -10,7 +10,7 @@ ex_mem_write_back,mem_write_back,ex_mem_push: in std_logic;
 RS_address,Rt_address,Rd_address_in,ex_mem_Rd,mem_wb_rd: in std_logic_vector(2 downto 0);---
 control_unit_signals_in : in std_logic_vector(25 downto 0);--- without el flush
 sp,next_pc_out,ex_result,Rs_out,Rt_out:out std_logic_vector(15 downto 0);
-control_unit_signals_out:out std_logic_vector(13 downto 0);
+control_unit_signals_out:out std_logic_vector(15 downto 0);
 Rd_address_out : out std_logic_vector(2 downto 0);
 exception : out std_logic
 );
@@ -34,15 +34,6 @@ component sp_controller is
         so      : out std_logic_vector(15 downto 0) 
     );
 end component ;
-
-component branch_unit 
-IS PORT (
-flages:in std_logic_vector(2 downto 0);
-jump_sel :in std_logic_vector(1 downto 0);
-jump:out std_logic
-);
-END component branch_unit;
-
 component  forwarding_unit IS 
 PORT(
     RS, RT, EX_M_RD, M_WB_RD: IN STD_LOGIC_VECTOR(2 DOWNTO 0);  -- Register addresses
@@ -87,13 +78,30 @@ generic(n:integer :=16);
         data_out: out STD_LOGIC_VECTOR(n-1 downto 0) 
     );
 end component;
+component flages_unit is port(
+alu_flages,ccr_flages:in std_logic_vector(2 downto 0);
+selector:in std_logic_vector(1 downto 0);--00 no change , 01 
+alu_operation:in std_logic;
+branch_index:in std_logic_vector(1 downto 0);
+flages_out:out std_logic_vector(2 downto 0)
+);
+end component;
+component branch_unit 
+IS PORT (
+flages:in std_logic_vector(2 downto 0);
+jump_sel :in std_logic_vector(1 downto 0);
+jump:out std_logic
+);
+END component;
+
 signal fa ,fb: std_logic_vector(1 downto 0);
 signal newrs:std_logic_vector(15 downto 0);
 signal newrt,alu_or_newrt:std_logic_vector(15 downto 0);
 signal second_alu_input,alu_output: std_logic_vector(15 downto 0);
-signal flags,sel : std_logic_vector(2 downto 0);
+signal flags,ccr_flages,new_flages,sel : std_logic_vector(2 downto 0);
 signal new_sp :std_logic_vector(15 downto 0);
-
+signal alu_operation:std_logic;
+signal branch_ex:std_logic;
 begin
 rd_Address_out<=rd_address_in;
 next_pc_out<=next_pc_input;
@@ -104,12 +112,17 @@ u0:forwarding_unit port map(RS_address,Rt_address,ex_mem_Rd,mem_wb_rd,ex_mem_wri
 u1:mux_4_2 port map(rs,ex_mem_result,mem_wb_reslut,(others=>'0'),fa,newrs);
 u2:mux_4_2 port map(rt,ex_mem_result,mem_wb_reslut,(others=>'0'),fb,newrt);
 u3:mux_2_1 port map(newrt,immediate,control_unit_signals_in(19),second_alu_input);
-u4:ALU port map(newrs,second_alu_input,alu_output,sel,flags(2),flags(1),flags(0));
+u4:ALU port map(newrs,second_alu_input,alu_output,sel,flags(2),flags(0),flags(1));
 u5:mux_2_1 port map (alu_output,newrt,control_unit_signals_in(22),alu_or_newrt);
 u6:mux_2_1 port map (alu_or_newrt,input_port,control_unit_signals_in(7),ex_result);
 u7:sixteen_bit_register port map(clk,'0','1',new_sp,sp);
 u8:sp_controller port map(clk,sp_in,control_unit_signals_in(24),ex_mem_push,new_sp);
-exception <= '1' when( unsigned(alu_output) > to_unsigned(4095, alu_output'length) or unsigned(new_sp)>to_unsigned(4095, new_sp'length))and(control_unit_signals_in(10)or control_unit_signals_in(11)) else '0';
-control_unit_signals_out<=(others=>'0') when (unsigned(alu_output) > to_unsigned(4095, alu_output'length) or unsigned(new_sp)>to_unsigned(4095, new_sp'length))and(control_unit_signals_in(10)or control_unit_signals_in(11)) else 
-control_unit_signals_in(13 downto 0) &control_unit_signals_in(24)&control_unit_signals_in(26);
+u9: sixteen_bit_register generic map(3) port map(clk,'0','1',new_flages,ccr_flages);
+u10:flages_unit port map (flags,ccr_flages,control_unit_signals_in(17 downto 16 ),alu_operation,control_unit_signals_in(15 downto 14),new_flages);
+u11:branch_unit port map(ccr_flages,control_unit_signals_in(15 downto 14),branch_ex);
+exception <= '1' when( unsigned(alu_output) > to_unsigned(4095, alu_output'length) or unsigned(new_sp)>to_unsigned(4095, new_sp'length))and(control_unit_signals_in(10)='1'or control_unit_signals_in(11)='1') else '0';
+control_unit_signals_out<=(others=>'0') when (unsigned(alu_output) > to_unsigned(4095, alu_output'length) or unsigned(new_sp)>to_unsigned(4095, new_sp'length))and(control_unit_signals_in(10)='1'or control_unit_signals_in(11)='1') else 
+control_unit_signals_in(25)&control_unit_signals_in(23)&control_unit_signals_in(13 downto 0) ;
+control_unit_signals_out(4)<=control_unit_signals_in(4) or branch_ex;
+alu_operation<='0' when sel="001" or sel="010" else '1';
 end top_module_third_stage_arch;

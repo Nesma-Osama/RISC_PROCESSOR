@@ -144,13 +144,16 @@ begin
         output_signals <= (others => '0');
         output_signals(14)<='1';-- conditional_branch left side
         output_signals(18)<='1';   -- hazard enable check on rs
-	
+         output_signals(16)<='1';-- flags
+        output_signals(17)<='1';   -- flages
+        	
     elsif opcode = "10010" then
         -- JN Rsrc1
         output_signals <= (others => '0');
         output_signals(15)<='1';-- conditional_branch right side 
 	output_signals(18)<='1';   -- hazard enable check on rs
-	
+	output_signals(16)<='1';-- flags
+        output_signals(17)<='1';   -- flages
 
     elsif opcode = "10011" then
         -- JC Rsrc1
@@ -158,7 +161,8 @@ begin
         output_signals(14)<='1';-- conditional_branch left side 
  	output_signals(15)<='1';-- conditional_branch right side 
  	output_signals(18)<='1';   -- hazard enable check on rs
-
+ 	output_signals(16)<='1';-- flags
+        output_signals(17)<='1';   -- flages
     elsif opcode = "10100" then
         -- JMP Rsrc1
         output_signals <= (others => '0');

@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 ---memory_to_reg 0,int 1, 
---hlt 2--//,call 3,unconditional_branch 4,fetch_decode_flush 5, ret 6,io_read 7,io_write 8,write_back 9
+--hlt 2,call 3,unconditional_branch 4,fetch_decode_flush 5, ret 6,io_read 7,io_write 8,write_back 9
 ---,memory_read  10,memory_write   11,
 ---memory_src  12,memory_datasrc 13,
 --conditional_branch 14: 15;--//
