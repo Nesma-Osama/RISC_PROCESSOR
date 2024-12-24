@@ -17,7 +17,8 @@ decode_memory_flush:in std_logic;
 next_pc_out,input_port_out,RS,RT:out std_logic_vector(15 downto 0);---
 RS_address,Rt_address,Rd_address: out std_logic_vector(2 downto 0);---
 control_unit_signals : out std_logic_vector(25 downto 0);
-pc_write : out std_logic 
+pc_write : out std_logic ;
+index:out std_logic
 );
 end entity ;
 
@@ -66,5 +67,5 @@ pc_write<=not stall;
 RS_address<=instruction(10 downto 8);
 Rt_address<=instruction(7 downto 5);
 Rd_address<=instruction(4 downto 2);
-
+index<=instruction(0);
 end top_module_second_stage_arch;

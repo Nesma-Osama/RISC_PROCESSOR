@@ -93,14 +93,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux_8_3
 -- Compiling architecture rtl of mux_8_3
 
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/top_module_third_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_third_stage.vhd}
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity top_module_third_stage
--- Compiling architecture top_module_third_stage_arch of top_module_third_stage
+-- Compiling entity branch_unit
+-- Compiling architecture branch_unit of branch_unit
 
 } {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/reg_file.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -111,13 +110,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity reg_file
 -- Compiling architecture reg_file_arch of reg_file
 
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/branch_unit.vhd
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/top_module_third_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\DELL\Downloads\cmp_third_year\computer_architecture\project\RISC_PROCESSOR\top_module_third_stage.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity branch_unit
--- Compiling architecture branch_unit of branch_unit
+-- Loading package NUMERIC_STD
+-- Compiling entity top_module_third_stage
+-- Compiling architecture top_module_third_stage_arch of top_module_third_stage
 
 } {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/top_module_second_stage.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/top_module_second_stage.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -128,15 +128,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity top_module_second_stage
 -- Compiling architecture top_module_second_stage_arch of top_module_second_stage
 
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/control_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/control_unit.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity control_unit
--- Compiling architecture control_unit_architecture of control_unit
-
 } {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/subtract.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -146,30 +137,22 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SUBTRACT
 -- Compiling architecture arch_SUBTRACT of SUBTRACT
 
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity ALU
--- Compiling architecture arch_ALU of ALU
-
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity pc_control_unit
--- Compiling architecture pc_control_unit of pc_control_unit
-
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/control_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/control_unit.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity instruction_memory
--- Compiling architecture instruction_arch of instruction_memory
+-- Compiling entity control_unit
+-- Compiling architecture control_unit_architecture of control_unit
+
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity forwarding_unit
+-- Compiling architecture forwarding_unit of forwarding_unit
 
 } {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/data_memory.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -180,12 +163,29 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity data_memory
 -- Compiling architecture data_memory_arch of data_memory
 
-} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/forwarding_unit.vhd
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/instruction_memory.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity forwarding_unit
--- Compiling architecture forwarding_unit of forwarding_unit
+-- Loading package NUMERIC_STD
+-- Compiling entity instruction_memory
+-- Compiling architecture instruction_arch of instruction_memory
+
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/pc_control_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pc_control_unit
+-- Compiling architecture pc_control_unit of pc_control_unit
+
+} {} {}} C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Downloads/cmp_third_year/computer_architecture/project/RISC_PROCESSOR/alu.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture arch_ALU of ALU
 
 } {} {}}
