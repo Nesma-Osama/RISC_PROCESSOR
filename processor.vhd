@@ -141,8 +141,7 @@ decode_input_port<=fd_output(47 downto 32);
 --decode_memory_flush  => oring 
 hlt<=decode_control_unit_signals_out(2);
 interrupt<=decode_control_unit_signals_out(1);
-flash_fd<=decode_control_unit_signals_out(5);
-m2:top_module_second_stage port map(clk,decode_nextpc_in,decode_input_port,decode_instruction_input,decode_rd_data_in,decode_Rd_address_out,decode_write_back_in,decode_memory_read_in,decode_memory_flush,decode_next_pc_out,decode_input_port_out,decode_rs_out,decode_rt_out,decode_rs_address_out,decode_rt_address_out,decode_Rd_address_out,decode_control_unit_signals_out,pc_write,index);
+m2:top_module_second_stage port map(clk,decode_nextpc_in,decode_input_port,decode_instruction_input,decode_rd_data_in,rd_Address_wb,decode_write_back_in,decode_memory_read_in,decode_memory_flush,decode_next_pc_out,decode_input_port_out,decode_rs_out,decode_rt_out,decode_rs_address_out,decode_rt_address_out,decode_Rd_address_out,decode_control_unit_signals_out,pc_write,index);
 de_input<=(decode_rs_address_out(2 downto 0)&decode_rt_address_out(2 downto 0)&decode_Rd_address_out(2 downto 0)& decode_rs_out(15 downto 0) & decode_rt_out(15 downto 0)& decode_instruction_input(15 downto 0)& decode_input_port_out(15 downto 0)& decode_next_pc_out(15 downto 0) & decode_control_unit_signals_out(25 downto 0));
 de:sixteen_bit_register generic map(115) port map(clk,'0','1',de_input,de_out);
 ---------------------------------------------------------
@@ -169,12 +168,11 @@ data_memory<=mem_res_me;
 wb:top_module_fifth_stage port map(clk,mem_w_output(56 downto 41) ,mem_w_output(40 downto 25),mem_w_output(24 downto 9),mem_w_output(8 downto 6),mem_w_output(5),mem_w_output(4),mem_w_output(3),mem_w_output(2),mem_w_output(1),mem_w_output(0),
 write_back_out_wb,rd_Address_wb,output_port,write_back_data_wb);
 decode_rd_data_in<=write_back_data_wb;
-decode_Rd_address_out<=rd_Address_wb;
 decode_write_back_in<=write_back_out_wb;
 mem_wb_result<=write_back_data_wb;
 mem_write_back<=decode_write_back_in;
 -------------flush decode 
-decode_memory_flush<= '1' when (control_unit_signals_out_ex(4)='1' or exception_ex='1' or ex_m_out(6)='1'or mem_w_output(0)='1') else '0';-- when jump and ret from ex or mem and also for execption
+decode_memory_flush<= '1' when ((decode_control_unit_signals_out(5)='1')or control_unit_signals_out_ex(4)='1' or exception_ex='1' or ex_m_out(6)='1'or mem_w_output(0)='1') else '0';-- when jump and ret from ex or mem and also for execption
 flash_fd<='1' when (hlt='1' or decode_memory_flush='1' )else '0' ;
 
-end processor
+end processor;
