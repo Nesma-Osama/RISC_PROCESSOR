@@ -31,6 +31,7 @@ begin
     elsif opcode = "00001" then
         output_signals <= (others => '0');
         output_signals(2) <= '1';   ---hlt
+	output_signals(5) <= '1';  ---fetch_decode_flush
         -- HLT 
     elsif opcode = "00010" then
        -- SETC
