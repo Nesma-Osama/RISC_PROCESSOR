@@ -166,7 +166,7 @@ jump_dmem<= '1' when ret_me='1' else '0';
 data_memory<=mem_res_me;
 ------------------------------------------------------------------------
 wb:top_module_fifth_stage port map(clk,mem_w_output(56 downto 41) ,mem_w_output(40 downto 25),mem_w_output(24 downto 9),mem_w_output(8 downto 6),mem_w_output(5),mem_w_output(4),mem_w_output(3),mem_w_output(2),mem_w_output(1),mem_w_output(0),
-write_back_out_wb,rd_Address_wb,output_port,write_back_data_wb);
+write_back_out_wb,rd_Address_wb,out_port,write_back_data_wb);
 decode_rd_data_in<=write_back_data_wb;
 decode_write_back_in<=write_back_out_wb;
 mem_wb_result<=write_back_data_wb;
